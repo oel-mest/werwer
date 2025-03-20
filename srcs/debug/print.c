@@ -6,7 +6,7 @@
 /*   By: oel-mest <oel-mest@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 01:36:53 by oel-mest          #+#    #+#             */
-/*   Updated: 2025/03/20 22:11:27 by oel-mest         ###   ########.fr       */
+/*   Updated: 2025/03/20 22:29:22 by oel-mest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,11 @@ void print_cmd(t_cmd *cmd, int depth, int is_last, t_envnode *head)
     printf("COMMAND:\n");
 
     // Print arguments
+    (void)head;
     print_indentation(depth + 1, 0);
     printf("ARGS: %s\n", cmd->args);
-    print_indentation(depth + 1, 0);
-    printf("EX ARGS: %s\n", expand_env_vars(cmd->args, head));
+    // print_indentation(depth + 1, 0);
+    // printf("EX ARGS: %s\n",(cmd->args, head));
 
     // Print input redirection
     if (cmd->input2) {

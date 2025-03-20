@@ -6,7 +6,7 @@
 /*   By: oel-mest <oel-mest@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 01:30:15 by oel-mest          #+#    #+#             */
-/*   Updated: 2025/03/20 01:57:34 by oel-mest         ###   ########.fr       */
+/*   Updated: 2025/03/20 22:26:34 by oel-mest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,7 @@ void	free_cmd(t_cmd *cmd)
 	free(cmd->output);
 	free(cmd->heredoc);
 	free_output_list(cmd->output2);
+	free_output_list(cmd->input2);
+	free_output_list(cmd->heredoc2);
 	free(cmd);
 }
